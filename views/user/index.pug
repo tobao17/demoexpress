@@ -1,11 +1,13 @@
-h1 chung ta khong thuoc ve nhau
-a(href='/user/create') new
-form(action="/user/search",method="GET")
-    input(type="text",name='q')
-    button search
-ul
-    each user  in users
-        li
-          span=user.name
-            span &nbsp;
-            a(href='/user/'+ user.id) View
+extends ../../layout/common
+block content 
+    h1 chung ta khong thuoc ve nhau
+    a(href='/user/create') new
+    form(action="/user/search",method="GET")
+        input(type="text",name='q')
+        button search
+    ul
+        each user  in users
+            li
+              span=user.name
+                span &nbsp;
+                a(href='/user/'+ user.id) View
