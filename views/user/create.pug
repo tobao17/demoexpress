@@ -1,5 +1,12 @@
-h1 create user
-form(action="/user/create",method="POST")
-    label Name
-    input(type="text", Name='name')
-    button Create
+extends ../../layout/common
+block content 
+    h1 Create user
+    if error
+        each err in error
+          .alert.alert-danger=err
+    form(action="/user/create",method="POST")        
+        label(for="name") Tên người dùng
+        input#name.form-control(type='text', name='name' placeholder='' value=values? values.name:'')
+        label.mt-3(for="Phone") Số điện thoại
+        input#Phone.form-control(type='text', name='Phone' placeholder='' value=values? values.Phone:'' )
+        button.btn.btn-primary.mt-3(type='submit') Create

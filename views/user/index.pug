@@ -1,13 +1,24 @@
 extends ../../layout/common
 block content 
-    h1 chung ta khong thuoc ve nhau
-    a(href='/user/create') new
-    form(action="/user/search",method="GET")
-        input(type="text",name='q')
-        button search
-    ul
-        each user  in users
-            li
-              span=user.name
-                span &nbsp;
-                a(href='/user/'+ user.id) View
+    h1 User
+   
+ 
+    form.form-inline(action="/user/search",method="GET")         
+        .form-group.mb-2
+            input.form-control(type='text', name='q' placeholder='Tên người dùng')
+            button.btn.btn-primary(type='submit') Tìm kiếm
+            a.btn.btn-primary.ml-3(href='/user/create') Thêm mới
+           
+        table.table
+            thead.thead-dark
+                tr
+                    th(scope='col') Name
+                    th(scope='col') Phone
+                    th(scope='col') Action
+            tbody            
+                each user  in users
+                    tr
+                        td=user.name
+                        td=user.Phone
+                        td    
+                          a(href='/user/'+ user.id) View
