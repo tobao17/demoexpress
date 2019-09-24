@@ -26,23 +26,11 @@ module.exports.viewid = (req, res) => {
     .find({ id: id2 })
     .value();
 
-  console.log(user.name);
   res.render("user/view", { user: user });
 };
 module.exports.postcreate = (req, res) => {
   req.body.id = shortid.generate();
-  var error = [];
-  if (!req.body.name) {
-    error.push("Name is required");
-  }
-  if (!req.body.Phone) {
-    error.push("Phone is required");
-  }
 
-  if (error.length) {
-    res.render("user/create", { error: error, values: req.body });
-    return;
-  }
   db.get("user")
     .push(req.body)
     .write();
