@@ -8,6 +8,10 @@ router.get("/", controler.index);
 router.get("/create", controler.create);
 
 router.get("/search", controler.search);
+router.get("/cookie", (req, res) => {
+  res.cookie("user-id ", 12345);
+  res.send("hello ");
+});
 
 router.post("/create", validate.postcreate, controler.postcreate);
 router.get("/:id", controler.viewid);

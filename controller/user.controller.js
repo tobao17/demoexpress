@@ -2,7 +2,10 @@ var db = require("../db");
 var shortid = require("shortid");
 module.exports.index = (req, res) =>
   res.render("user/index", { users: db.get("user").value() });
-module.exports.create = (req, res) => res.render("user/create");
+module.exports.create = (req, res) => {
+  console.log(req.cookies);
+  res.render("user/create");
+};
 module.exports.search = (req, res) => {
   var q = req.query.q;
   var searchuser = db

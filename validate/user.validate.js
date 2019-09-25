@@ -14,4 +14,5 @@ module.exports.postcreate = (req, res, next) => {
   next();
   //middleware : ham trung gian
   //validate: bat loi nguoi dung nhap vao
+  //res.locals
 };
