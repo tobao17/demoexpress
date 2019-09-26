@@ -1,0 +1,12 @@
+extends ../../layout/common
+block content 
+    h1 Login
+    if error
+        each err in error
+          .alert.alert-danger=err
+    form(method="POST")        
+        label(for="email") Email
+        input#email.form-control(type='text', name='email' placeholder='' value=values? values.email:'')
+        label.mt-3(for="password") password
+        input#Phone.form-control(type='password', name='password' placeholder='' value=values? values.password:'' )
+        button.btn.btn-primary.mt-3(type='submit') Login

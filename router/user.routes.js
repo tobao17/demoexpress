@@ -2,8 +2,9 @@ var express = require("express");
 var validate = require("../validate/user.validate");
 var router = express.Router();
 var controler = require("../controller/user.controller");
+var middleware = require("../middleware/middleware");
 
-router.get("/", controler.index);
+router.get("/", middleware.requirelogin, controler.index);
 
 router.get("/create", controler.create);
 

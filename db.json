@@ -23,12 +23,16 @@
     {
       "name": "Nguyễn Hữu Chí",
       "Phone": "0120012012",
-      "id": "SSFEZnvj"
+      "id": "SSFEZnvj",
+      "email": "phamtobao99@gmail.com",
+      "password": "123456"
     },
     {
       "name": "phạm văn trọng",
       "Phone": "01203727493",
-      "id": "T_xWz-4I"
+      "id": "T_xWz-4I",
+      "email": "phamtobao99@gmail.com",
+      "password": "a"
     }
   ]
 }
