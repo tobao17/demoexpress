@@ -12,5 +12,6 @@ module.exports.requirelogin = (req, res, next) => {
     res.redirect("/login/login");
     return;
   }
+  res.locals.user = user;
   next();
 };
