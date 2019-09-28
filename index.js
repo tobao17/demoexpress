@@ -1,3 +1,6 @@
+require("dotenv").config();
+console.log();
+
 const express = require("express");
 var userRoute = require("../demoexpress/router/user.routes");
 var loginRoute = require("../demoexpress/router/login.router");
@@ -8,7 +11,7 @@ const port = 3000;
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
+app.use(cookieParser(process.env.keycookie));
 app.set("view engine", "pug");
 app.set("views", "./views");
 app.get("/", (req, res) => res.render("index", { name: "aaaa" }));

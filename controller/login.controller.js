@@ -24,6 +24,8 @@ module.exports.postlogin = (req, res) => {
     res.render("login/login", { error: ["Wrongpassword!"], values: req.body });
     return;
   }
-  res.cookie("userid", user.id);
+  res.cookie("userid", user.id, {
+    signed: true
+  });
   res.redirect("/user");
 };
