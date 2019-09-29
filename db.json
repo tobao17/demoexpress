@@ -1,33 +1,6 @@
 {
   "user": [
     {
-      "name": "Phạm Văn Trọng",
-      "id": "BtSJFgaE"
-    },
-    {
-      "name": "Phạm Tô Bảo",
-      "id": "QsCEMqyg"
-    },
-    {
-      "name": "Võ Thị Hồng Thoa",
-      "id": "CfcBn1nz"
-    },
-    {
-      "name": "Nguyễn Hữu Trọng",
-      "id": "qzYmblMW"
-    },
-    {
-      "name": "Ngô Văn Sỉ",
-      "id": "v9bb9eY1"
-    },
-    {
-      "name": "Nguyễn Hữu Chí",
-      "Phone": "0120012012",
-      "id": "SSFEZnvj",
-      "email": "phamtobao999@gmail.com",
-      "password": "d3eb9a9233e52948740d7eb8c3062d14"
-    },
-    {
       "name": "phạm văn trọng",
       "Phone": "01203727493",
       "id": "T_xWz-4I",
@@ -35,14 +8,42 @@
       "password": "e10adc3949ba59abbe56e057f20f883e"
     },
     {
-      "name": "Hà Hải Long",
-      "Phone": "01203727493",
-      "id": "y8fXDaKO"
+      "name": "phạm văn trọng",
+      "Phone": "adasdfa",
+      "id": "BgaMPx2V"
     },
     {
-      "name": "Nguyễn văn Định",
+      "name": "phạm văn trọng",
+      "Phone": "01203727493",
+      "id": "75CgI4Ae"
+    },
+    {
+      "name": "lu anh vao",
+      "Phone": "23243",
+      "id": "upload\\b5910b29fba12434a1f74deed22eacbf"
+    },
+    {
+      "name": "upanh2",
+      "Phone": "12121212",
+      "id": "XcR0nJ5w"
+    },
+    {
+      "name": "phạm văn trọng",
       "Phone": "0101010101",
-      "id": "V8-cqTGA"
+      "id": "18yc4Fc9",
+      "avatar": "upload\\317c0f4a6f8cd9e9e3063ec7096f4f7a"
+    },
+    {
+      "name": "upanh3",
+      "Phone": "123132123",
+      "id": "K67ZFw__",
+      "avatar": "upload\\b9c9a90e25d1ab81769f262e7e94ecf0"
+    },
+    {
+      "name": "update3",
+      "Phone": "132213",
+      "id": "mk2_uBd1",
+      "avatar": "upload\\3c8413ad574f9beb4f8485ad964f7776"
     }
   ]
 }

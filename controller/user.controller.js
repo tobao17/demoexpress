@@ -3,7 +3,6 @@ var shortid = require("shortid");
 module.exports.index = (req, res) =>
   res.render("user/index", { users: db.get("user").value() });
 module.exports.create = (req, res) => {
-  console.log(req.cookies);
   res.render("user/create");
 };
 module.exports.search = (req, res) => {
@@ -14,15 +13,13 @@ module.exports.search = (req, res) => {
     .filter(function(user) {
       return user.name.toLowerCase().indexOf(q.toLowerCase()) !== -1;
     });
-  console.log("dm m ra khong con cho");
+
   res.render("user/index", {
     users: searchuser
   });
 };
 module.exports.viewid = (req, res) => {
   var id2 = req.params.id;
-
-  console.log(id2);
 
   var user = db
     .get("user")
@@ -33,7 +30,10 @@ module.exports.viewid = (req, res) => {
 };
 module.exports.postcreate = (req, res) => {
   req.body.id = shortid.generate();
-
+  req.body.avatar = req.file.path
+    .split("\\")
+    .slice(1)
+    .join("\\");
   db.get("user")
     .push(req.body)
     .write();
