@@ -1,11 +1,13 @@
 require("dotenv").config();
 console.log();
 
+var mongoose = require("mongoose");
 const express = require("express");
 var userRoute = require("../demoexpress/router/user.routes");
 var loginRoute = require("../demoexpress/router/login.router");
 var cookieParser = require("cookie-parser");
 
+mongoose.connect(process.env.mongourl, { useNewUrlParser: true });
 const port = 3000;
 
 const app = express();
